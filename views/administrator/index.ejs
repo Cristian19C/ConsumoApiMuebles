@@ -1,0 +1,85 @@
+<title><%=title%></title>
+
+<%- include("./template/cabecera.ejs") %>
+
+<div class="container">
+    <br>
+        <% if (data.length> 0) { %>    
+        <br><br><br><br>
+        <div class="table-responsive">
+                <table class="table table-light">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>nombre</th>
+                            <th>Precio</th>
+                            <th>Descripcion</th>
+                            <th>Categoria</th>
+                            <th>Imagen</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach(element => {%>
+                            <tr>
+                                <td><%= element.id_product %></td>
+                                <td><%= element.name %></td>
+                                <td><%= element.price %></td>
+                                <td><%= element.description %></td>
+                                <td><%= element.category %></td>
+                                <td>
+                                    <img src="./img/<%= element.image %>" class="formulario__img" alt="">
+                                </td>
+                    
+                                <td>
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                       
+                                            <form action="" class="form-inline">
+                                                <a href="<%=element._id%>" class="btn btn-primary">Editar</a>
+                                            </form>
+
+                                    </div>
+                                    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                                        <form method="GET" class="form-inline" action="/delete/<%=element._id%>">
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#confirmModal_<%= element.id_product %>">Borrar</button>
+                                            <!-- <a href="">
+                                            </a> -->
+                                            <div class="modal fade" id="confirmModal_<%= element.id_product %>" tabindex="-1" role="dialog" aria-labelledby="confirmModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                    <h5 class="modal-title" id="confirmModalLabel">Confirmar borrado</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ¿Estás seguro de que deseas borrar el registro <p><%=element.id_product %> ?</p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                                                    <button type="submit" class="btn btn-danger" name="accion" value="borrar">Sí</button>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                </table>
+            <% } else { %>
+                <h4>No hay registros</h4>
+            <% } %>
+        </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="./js/menu.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<title><%=title%></title>
+
+<%- include("./template/cabecera.ejs") %>
+
+    <br><br><br><br>
+<div class="formulario__agregar update">
+    <div class="formulario__title">Datos del material</div>
+    <form method="POST" action="/update/<%= data._id%>" enctype="multipart/form-data">
+        <label for="id_product">ID:</label> 
+        <input type="number" required readonly name="id_product" id="id_product" placeholder="ID" value="<%= data.id_product%>">
+        <label for="name">Nombre:</label> 
+        <input type="text" required name="name"  id="name" value="<%= data.name%>" placeholder="Nombre del material">
+        <label for="price">Precio:</label> 
+        <input type="number" required name="price"  id="price" placeholder="Precio del material" value="<%= data.price%>">
+        <label for="text">Descripcion:</label> 
+        <input type="text" required name="description"  id="number" placeholder="Cantidad del material" value="<%= data.description%>">
+        <label for="description">categoria:</label>
+        <select required name="category" id="description" class="list" value="<%= data.category%>">
+            <option class="list-option" value="sofas">Sofas</option>
+            <option class="list-option" value="muebles">Muebles</option>
+            <option class="list-option" value="sillas">Sillas</option>
+        </select>
+
+        <label for="brand">imagen:</label> 
+        <label>
+            <img src="./img/<%= data.image %>" class="formulario__img" alt="">
+        </label>
+        <input type="file"  name="brand"  id="brand" name="image">
+        
+        
+
+        <div class="container__buttons">
+
+            <button type="submit" class="button button--success">Modificar</button>
+    
+            <button type="submit" name="accion" value="Cancelar" class="button button--info"><a href="/admin" class="button--a">Cancelar</a></button>
+        </div>
+    </form>
+</div>
+
+<script src="./js/menu.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

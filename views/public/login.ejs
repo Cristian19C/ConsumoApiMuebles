@@ -1,0 +1,39 @@
+<%- include("./template/cabecera.ejs") %>
+<link rel="stylesheet" href="./css/login.css">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<title><%=title%></title>
+
+
+    <main id="principal">
+        <div class="container--login">
+            <form method="POST" action="/sesion" class="form--box">
+                <div class="cabecera--form">
+                    <div class="cabecera--txt">
+                        <h1 class="title--general">Muebles</h1>
+                        <h1 class="title--general-1">Montaña</h1>
+                    </div>
+                    
+                    <img src="img/417537-removebg-preview-4.png" alt="" class="logo--login">
+                </div>
+                <div class="container--input">
+                    <input type="text" class="input-field" name="user" id="user" placeholder="Digite su usuario" required/>
+                    <i class='bx bxs-user-account'> | </i>
+                </div>
+                <div class="container--input">
+                    <input type="password" name="password"  required placeholder="Digite su contraseña">
+                    <i class='bx bxs-lock'> | </i>
+                </div>
+                <div class="container--adiccionales">
+                    <!-- <a href="" class="login--link">He olvidado mi contraseña</a> -->
+                    <!-- <p><a href="" class="login--link">¿No tienes un cuenta?  Registrate</a></p> -->
+                </div>
+                <button type="submit">Iniciar sesión</button>
+                
+            </form>
+        </div>
+    </main>
+    <script src="./js/menu.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<title><%=title%></title>
+<%- include("./template/cabecera.ejs") %>
+
+<div class="container-slider">
+    <div class="slider" id="slider">
+        <div class="slider__section">
+            <img src="img/slider_1.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <p class="slider__txt">¡Vive los espacios!</p>
+            </div>
+        </div>
+        <div class="slider__section">
+            <img src="img/slider_2.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <p class="slider__txt">¡Renueva tus muebles!</p>
+            </div>
+        </div>
+        <div class="slider__section">
+            <img src="img/slider_3.jpg" alt="" class="slider__img">
+            <div class="slider__content">
+                <p class="slider__txt">¡Bienestar en tu hogar!</p>
+            </div>
+        </div>
+    </div>
+    <div class="slider__btn slider__btn-right" id="btn-right">&#62;</div>
+    <div class="slider__btn slider__btn-left" id="btn-left">&#60;</div>
+</div>
+
+<main class="main">
+    <div class="container">
+        <section class="container-products">
+            <div class="product">
+                <div class="container__figure">
+                    <a href="/asientos"><img src="img/slider_1.jpg" alt="" class="container__img"></a>
+                </div>
+                <div class="product__description">
+                    <h3 class="product__title">Asientos</h3>
+                </div>
+            </div>       
+            <div class="product">
+                <div class="container__figure">
+                    <a href="/sofas"><img src="img/slider_1.jpg" alt="" class="container__img"></a>
+                </div>
+                <div class="product__description">
+                    <h3 class="product__title">Sofás</h3>
+                </div>
+            </div>    
+            <div class="product">
+                <div class="container__figure">
+                    <a href="/muebles"><img src="img/slider_1.jpg" alt="" class="container__img"></a>
+                </div>
+                <div class="product__description">
+                    <h3 class="product__title">Muebles</h3>
+                </div>
+            </div>    
+        </section>
+        <!-- boton whawhatsapp -->
+
+        <div class="contianer__whatsapp">
+            <a href="https://www.youtube.com/watch?v=N9yEJVN1R-Y&ab_channel=M%C3%A4godeOz-Topic"><img src="img/WhatsApp.svg.webp" alt="" class="img__whatsapp"></a>
+        </div>
+
+        <!-- Muebles favoritos -->
+        
+    </div>
+    
+
+    <!-- sección de redes -->
+    <div class="container__redes">
+        <div class="container__ubicacion">
+            <img src="img/slider_2.jpg" alt="" class="ubicacion__img">
+            <div class="ubicacion__description">
+                <h2 class="ubicacion__title">Visítanos en nuestra ubicación</h2>
+                <a href="" class="ubicacion__link">Sogamoso, Boyacá
+                </a>
+            </div>
+        </div>
+        <div class="container__facebook">
+            <img src="img/slider_1.jpg" alt="" class="facebook__img">
+            <div class="facebook__description">
+                <h2 class="facebook__title">Síguenos en Facebook</h2>
+                <a href="" class="facebook__link">Facebook
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+</main>
+
+<%- include("./template/pie.ejs") %>

@@ -1,0 +1,62 @@
+<title><%=title%></title>
+<%- include("./template/cabecera.ejs") %>
+
+    
+
+
+    <main class="main">
+        <div class="container">
+            <div class="fondo__sillas">
+                <img src="../img/Asientos/slider.jpg" alt="" class="fondo__img">
+                
+
+            </div>
+        </div>
+
+        
+        <div class="container-btn">
+            <div class="icon__subMenu"></div>
+            <div class="icon__txt">Nuestros productos</div>
+        </div>
+        <div class="container__general--asientos">
+            <div class="container__productos">
+                <div class="subMenu">
+                    <nav class="sub__nav">
+                        <li class="sub__item"><a href="/asientos" class="sub__link principal" data="Asientos">Asientos</a></li>
+                        <li class="sub__item"><a href="/sofas" class="sub__link principal" data="Sófas">Sófas</a></li>
+                        <li class="sub__item"><a href="/muebles" class="sub__link principal" data="Muebles">Muebles</a></li>
+                    </nav>
+                </div>
+            </div>
+            <% if (data.length > 0) %>
+                <section class="container__asientos">
+                    <% data.forEach(element => {  %>
+                        <div class="productos">
+                            <img id="efecto" src="./img/<%= element.image %>" alt="" class="producto__img">
+                            <div class="favoritos__descripcion">
+                                <p class="asientos__nombre"><%= element.name %></p>
+                                <a href="/details/<%=element._id%>" class="asientos__precio"><p class="">Detalles</p></a>
+                            </div>
+                        </div>
+                    <% }) %>
+                </section>
+        </div>
+        <!-- <div class="division__footer"></div> -->
+    </main>
+
+
+    <footer class="container__footer footer__productos">
+        <div class="container__redes-sociales">
+            <h2 class="redes__title">Siguenos en nuestras redes sociales</h2>
+            <a href="https://www.facebook.com/profile.php?id=100090895850515&mibextid=ZbWKwL" class="icon__link"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=573142878353&text&type=phone_number&app_absent=0" class="icon__link"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div class="container__copy">
+            <p class="copy">Muebles Sogamoso. Todos los derechos reservados © 2022</p>
+        </div>
+    </footer>
+
+
+    <script src="../js/menu.js"></script>
+</body>
+</html>
