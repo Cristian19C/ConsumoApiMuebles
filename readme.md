@@ -1,11 +1,11 @@
 # Proyecto Muebles Montaña
 
-Este proyecyo tiene como objetivo el consumo de la La API  “Muebles Montaña” la cual se ha diseñado para proporcionar al cliente una plataforma para la gestión los productos que ofrece, así como permitir exhibir para sus clientes los diferentes productos que brinda en su negocio, de igual modo la información de estos productos, incluyendo el precio y una vista básica.
+Este proyecto tiene como objetivo el consumo de la La API  “Muebles Montaña”, la cual se ha diseñado para proporcionar al cliente una plataforma para la gestión los productos que ofrece, así como permitir exhibir para sus clientes los diferentes productos que brinda en su negocio, de igual modo la información de estos productos, incluyendo el precio y una vista básica.
 
 ## Integrantes del equipo
 
 - Cristian David Córdoba Tibocha
-- Juan Camilo Vargas Cardenaz
+- Juan Camilo Vargas Cardenas
 
 ## Dependencias
 - Express (v4.18.2): Un framework web rápido y minimalista para Node.js.
